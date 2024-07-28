@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff; /* Changed to white */
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.header {
+  width: calc(100% - 260px); /* Increased the width */
+  display: flex;
+  justify-content: flex-end; /* Align User Info to the right */
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  right: 0; /* Align to the right */
+  box-sizing: border-box;
+  z-index: 1000;
+  height: 60px;
+}
+
+.sidebar {
+  width: 220px; /* Increased the width */
+  background-color: #ffffff; /* White background */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: black;
+}
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: #ffffff; /* White background */
+  padding: 10px;
+  border-radius: 8px; /* Rounded corners */
+}
+
+.sidebar .logo img {
+  width: 40px;
+  margin-right: 10px;
+  border-radius: 8px; /* Rounded corners for the image */
+  background-color: #ffffff; /* White background */
+}
+
+.sidebar div {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background 0.3s, color 0.3s; /* Smooth transition for color */
+  cursor: pointer;
+}
+
+.sidebar div:hover {
+  background-color: #7b77ff; /* Lighter purple shade on hover */
+  color: white; /* White text color on hover */
+}
+
+.sidebar .active {
+  background-color: #7b77ff; /* Purple shade for active link */
+  color: white; /* White text color for active link */
+}
+
+.sidebar div svg {
+  margin-right: 10px;
+}
+
+.main-content {
+  margin-left: 260px; /* Increased to account for the wider sidebar */
+  margin-top: 60px; /* Adjust to account for the fixed header */
+  padding: 30px; /* Increased padding */
+  width: calc(100% - 260px);
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 30px; /* Increased padding */
+  margin: 15px; /* Increased margin */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.card-balance {
+  background-color: #ffe4e6;
+}
+
+.card-income {
+  background-color: #ffedcc;
+}
+
+.card-spending {
+  background-color: #d6ffd6;
+}
+
+.card-stocks {
+  background-color: #e6e6ff;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container > .card {
+  flex: 1;
+  min-width: 220px; /* Increased minimum width */
+}
+
+.balance-overview,
+.stock-earning,
+.quick-transfer,
+.invoices,
+.currencies-market {
+  margin-top: 20px;
+}
+
+.currencies-market {
+  padding: 30px; /* Increased padding */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.currencies-market h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.currencies-container {
+  display: flex;
+  gap: 15px; /* Increased gap */
+}
+
+.currency-box {
+  flex: 1;
+  padding: 15px; /* Increased padding */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.flag-wrapper {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.flag-wrapper img {
+  border-radius: 50%;
+}
+
+.currency-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.currency-symbol {
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+}
+
+.currency-value {
+  font-weight: bold;
+  color: #555;
+}
